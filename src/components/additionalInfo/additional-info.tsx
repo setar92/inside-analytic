@@ -1,11 +1,11 @@
 import { FC } from 'react';
 
 import { locationIcon } from '../../assets';
-import { generalLocation } from '../../common/types';
+import { CommonLocation } from '../../common/types';
 
 interface AdditionalInfoProps {
   hideInformation: () => void;
-  location: generalLocation;
+  location: CommonLocation;
 }
 
 const AdditionalInfo: FC<AdditionalInfoProps> = ({

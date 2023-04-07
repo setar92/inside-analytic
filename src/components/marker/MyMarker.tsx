@@ -2,12 +2,12 @@ import { FC } from 'react';
 
 import { MarkerF } from '@react-google-maps/api';
 
-import { ICoordinates, generalLocation } from '../../common/types';
+import { ICoordinates, CommonLocation } from '../../common/types';
 
 interface MyMarkerProps {
   position: ICoordinates;
-  onClick: (location: generalLocation) => void;
-  allInfo: generalLocation;
+  onClick: (location: CommonLocation) => void;
+  allInfo: CommonLocation;
   iconUrl?: string;
 }
 
