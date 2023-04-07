@@ -1,43 +1,41 @@
 import { FC, useCallback, useRef, useState, useEffect } from 'react';
+import uuid from 'react-uuid';
 
 import { GoogleMap } from '@react-google-maps/api';
 
 import { MyMarker } from '..';
-import { ICoordinates, generalLocation } from '../../common/types';
-import { useAppSelector } from '../../hooks/store/store.hooks';
+import { allLocationsData } from '../../common/constants';
 import {
-  nationalPostData1,
-  nationalPostData2,
-  locationsOmniva,
-  venipakData,
-} from '../../mock-data';
+  ICoordinates,
+  CommonLocation,
+  IAllLocationsData,
+} from '../../common/types';
+import { filterData } from '../../helpers/filter-logic';
+import { commonNationalPost } from '../../helpers/locations-dto';
+import { useAppSelector } from '../../hooks/store/store.hooks';
 import { defaultOptions } from './options';
 
-//Choose just pacomats
-const natPostMachines = [...nationalPostData1, ...nationalPostData2].filter(
-  (loc) => loc.tmpCategory === 5,
-);
-const omnivaLatviaPacomats = locationsOmniva.filter((loc) => loc.TYPE === '0');
-
 interface MapInterface {
-  showData: (location: generalLocation) => void;
+  showData: (location: CommonLocation) => void;
 }
 
 const Map: FC<MapInterface> = ({ showData }) => {
-  const [nationalPostData, setNationalPostData] = useState(natPostMachines);
-  const [omnivaData, setOmnivaData] = useState(omnivaLatviaPacomats);
-  const [venipakLocData, setVenipakData] = useState(venipakData);
+  const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
   const [position, setPosition] = useState<ICoordinates>({
-    lat: natPostMachines[0].tmpLat,
-    lng: natPostMachines[0].tmpLong,
+    lat: commonNationalPost[0].latitude,
+    lng: commonNationalPost[0].longitude,
   });
-  const showsPostMachines = useAppSelector((state) => state.filter);
+  const filterCriterions = useAppSelector((state) => state.filter);
 
-  const chooseOwnerHandler = (location: generalLocation): void => {
+  useEffect(() => {
+    const locationsData = filterData(allLocationsData, filterCriterions);
+    setAllLocations(locationsData);
+  }, [filterCriterions]);
+  const choosePostMachineHandler = (location: CommonLocation): void => {
     showData(location);
     setPosition({
-      lat: location.lat,
-      lng: location.ltn,
+      lat: location.latitude,
+      lng: location.longitude,
     });
   };
 
@@ -50,60 +48,6 @@ const Map: FC<MapInterface> = ({ showData }) => {
     mapRef.current = undefined;
   }, []);
 
-  useEffect(() => {
-    const nationalRiga = natPostMachines.filter(
-      (location) =>
-        location.tmpDistrict === 'Rīga' || location.tmpDistrict === 'Jūrmala',
-    );
-    setNationalPostData([...nationalRiga]);
-    const omnivaRiga = omnivaData.filter(
-      (location) => location.A1_NIMI === 'Rīga',
-    );
-    setOmnivaData([...omnivaRiga]);
-
-    const venipakRiga = venipakData.filter(
-      (location) => location.city === 'R\u012bga',
-    );
-    setVenipakData([...venipakRiga]);
-  }, []);
-
-  useEffect(() => {
-    if (showsPostMachines.justRiga) {
-      const nationalRiga = natPostMachines.filter(
-        (location) =>
-          location.tmpDistrict === 'Rīga' || location.tmpDistrict === 'Jūrmala',
-      );
-      setNationalPostData([...nationalRiga]);
-
-      const omnivaRiga = omnivaLatviaPacomats.filter(
-        (location) =>
-          location.A1_NIMI === 'Rīga' || location.A1_NIMI === 'Jūrmala',
-      );
-      setOmnivaData([...omnivaRiga]);
-
-      const venipakRiga = venipakData.filter(
-        (location) => location.city === 'R\u012bga',
-      );
-      setVenipakData([...venipakRiga]);
-    }
-    if (showsPostMachines.justLatvia) {
-      const venipakLatvia = venipakData.filter(
-        (location) => location.country === 'LV',
-      );
-      setVenipakData([...venipakLatvia]);
-      setNationalPostData([...natPostMachines]);
-      const omnivaLatvia = omnivaLatviaPacomats.filter(
-        (location) => location.country_id === 'LV',
-      );
-      setOmnivaData([...omnivaLatvia]);
-    }
-    if (showsPostMachines.allLocations) {
-      setNationalPostData([...natPostMachines]);
-      setOmnivaData([...omnivaLatviaPacomats]);
-      setVenipakData([...venipakData]);
-    }
-  }, [showsPostMachines]);
-
   return (
     <div className="flex justify-center">
       <GoogleMap
@@ -114,53 +58,17 @@ const Map: FC<MapInterface> = ({ showData }) => {
         onUnmount={onUnmount}
         options={defaultOptions}
       >
-        {showsPostMachines.showNational &&
-          nationalPostData.map((loc, id) => (
+        {allLocations.map((locationData) => {
+          return locationData.data.map((loc) => (
             <MyMarker
-              key={id}
-              position={{ lat: loc.tmpLat, lng: loc.tmpLong }}
-              onClick={chooseOwnerHandler}
-              allInfo={{
-                name: loc.tmpName,
-                adress: loc.tmpAddress,
-                lat: loc.tmpLat,
-                ltn: loc.tmpLong,
-                owner: 'national',
-              }}
+              key={uuid()}
+              position={{ lat: loc.latitude, lng: loc.longitude }}
+              onClick={choosePostMachineHandler}
+              allInfo={loc}
+              iconUrl={locationData.marker}
             />
-          ))}
-        {showsPostMachines.showOmniva &&
-          omnivaData.map((loc, id) => (
-            <MyMarker
-              key={id}
-              position={{ lat: +loc.lat, lng: +loc.lng }}
-              onClick={chooseOwnerHandler}
-              allInfo={{
-                name: loc.NAME,
-                adress: loc.A1_NIMI || String(loc.A2_NIMI),
-                lat: +loc.lat,
-                ltn: +loc.lng,
-                owner: 'omniva',
-              }}
-              iconUrl="sasi.webp"
-            />
-          ))}
-        {showsPostMachines.showVenipak &&
-          venipakLocData.map((loc, id) => (
-            <MyMarker
-              key={id}
-              position={{ lat: +loc.lat, lng: +loc.lng }}
-              onClick={chooseOwnerHandler}
-              allInfo={{
-                name: loc.name,
-                adress: loc.address,
-                lat: +loc.lat,
-                ltn: +loc.lng,
-                owner: 'venipak',
-              }}
-              iconUrl="VenipakMarket.svg"
-            />
-          ))}
+          ));
+        })}
       </GoogleMap>
     </div>
   );

@@ -1,5 +1,5 @@
-export { nationalPostData1 } from './nationalPost1';
-export { nationalPostData2 } from './nationalPost2';
-export { locationsOmniva } from './omniva';
-export { type Ilocation, type OmnivaLocation, type VenipakData } from './types';
-export { venipakData } from './venipack';
+import locationsNationalPost from './NationalPost.json';
+import locationsOmniva from './Omniva.json';
+import locationsVenipak from './Venipak.json';
+
+export { locationsNationalPost, locationsOmniva, locationsVenipak };

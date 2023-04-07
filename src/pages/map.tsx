@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 
 import { useJsApiLoader } from '@react-google-maps/api';
 
-import { generalLocation } from '../common/types';
+import { CommonLocation } from '../common/types';
 import { Loader, Map, AdditionalInfo, Filter } from '../components';
 
 const MapPage: FC = () => {
@@ -10,10 +10,12 @@ const MapPage: FC = () => {
     id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP as string,
   });
-  const [location, setLocation] = useState<generalLocation>();
+  const [location, setLocation] = useState<CommonLocation>();
 
   const hideInformation = (): void => {
-    setLocation({ adress: '', lat: 0, ltn: 0, name: '', owner: 'national' });
+    if (location) {
+      setLocation({ ...location, adress: '' });
+    }
   };
 
   return (

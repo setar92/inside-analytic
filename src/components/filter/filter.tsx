@@ -1,119 +1,89 @@
 import { ChangeEvent, FC } from 'react';
 
-import { useAppDispatch, useAppSelector } from '../../hooks/store/store.hooks';
 import {
-  setShow,
-  allLocations,
-  justLatvia,
-  justRiga,
-} from '../../store/filter/slice';
+  cities,
+  countries,
+  allLocationsData,
+} from '../../common/constants/filter-constants';
+import { useAppDispatch, useAppSelector } from '../../hooks/store/store.hooks';
+import { setOwner, setCity, setCountry } from '../../store/filter/slice';
 
 const Filter: FC = () => {
   const dispatch = useAppDispatch();
-  const showsPostMachines = useAppSelector((state) => state.filter);
-  const nationalHideHandler = (event: ChangeEvent<HTMLInputElement>): void => {
-    dispatch(
-      setShow({ ...showsPostMachines, showNational: event.target.checked }),
-    );
+  const filterCriterions = useAppSelector((state) => state.filter);
+
+  const chooseOwnerHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    const owner = event.target.name;
+    const turn = event.target.checked;
+    dispatch(setOwner({ owner, turn }));
   };
-  const omnivaHideHandler = (event: ChangeEvent<HTMLInputElement>): void => {
-    dispatch(
-      setShow({ ...showsPostMachines, showOmniva: event.target.checked }),
-    );
+  const chooseCityHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    const city = event.target.name;
+    const turn = event.target.checked;
+    dispatch(setCity({ city, turn }));
   };
-  const venipakHideHandler = (event: ChangeEvent<HTMLInputElement>): void => {
-    dispatch(
-      setShow({ ...showsPostMachines, showVenipak: event.target.checked }),
-    );
+  const chooseCountryHandler = (event: ChangeEvent<HTMLInputElement>): void => {
+    const country = event.target.name;
+    const turn = event.target.checked;
+    dispatch(setCountry({ country, turn }));
   };
-  const justRigaHandler = (): void => {
-    dispatch(justRiga(''));
-  };
-  const justLatviaHandler = (): void => {
-    dispatch(justLatvia(''));
-  };
-  const allLocationsHandler = (): void => {
-    dispatch(allLocations(''));
-  };
+
   return (
     <div>
       <div className=" text-orange-600 font-bold px-4 py-2">Owner</div>
       <div className="p-4 rounded-lg border-orange-600 border-2 ml-4 bg-black text-zinc-50">
-        <div className="flex">
-          <input
-            type="checkbox"
-            name="National"
-            onChange={nationalHideHandler}
-            checked={showsPostMachines.showNational}
-          />
-          <label className="ml-2" htmlFor="National">
-            National
-          </label>
-        </div>
-        <div className="flex">
-          <input
-            type="checkbox"
-            name="Omniva"
-            onChange={omnivaHideHandler}
-            checked={showsPostMachines.showOmniva}
-          />
-          <label className="ml-2" htmlFor="Omniva">
-            Omniva
-          </label>
-        </div>
-        <div className="flex">
-          <input
-            type="checkbox"
-            name="Venipak"
-            onChange={venipakHideHandler}
-            checked={showsPostMachines.showVenipak}
-          />
-          <label className="ml-2" htmlFor="Venipak">
-            Venipak
-          </label>
-        </div>
+        {allLocationsData.map((owner, index) => {
+          return (
+            <div key={index} className="flex">
+              <input
+                type="checkbox"
+                name={owner.ownerName}
+                onChange={chooseOwnerHandler}
+                checked={filterCriterions.owners.includes(owner.ownerName)}
+              />
+              <label className="ml-2" htmlFor="City">
+                {owner.ownerName}
+              </label>
+            </div>
+          );
+        })}
       </div>
-      <div className=" text-orange-600 font-bold p-4 px-4 py-2">Location</div>
-      <form className="p-4 rounded-lg border-orange-600 border-2 ml-4 bg-black text-zinc-50 ">
-        <div>
-          <div className="flex">
-            <input
-              type="radio"
-              name="location"
-              id="Riga"
-              onChange={justRigaHandler}
-              checked={showsPostMachines.justRiga}
-            />
-            <label className="ml-2" htmlFor="Riga">
-              Riga
-            </label>
-          </div>
-          <div className="flex">
-            <input
-              type="radio"
-              name="location"
-              id="Latvia"
-              onChange={justLatviaHandler}
-              checked={showsPostMachines.justLatvia}
-            />
-            <label className="ml-2" htmlFor="Latvia">
-              Latvia
-            </label>
-          </div>
-          <div className="flex">
-            <input
-              type="radio"
-              name="location"
-              id="All"
-              onChange={allLocationsHandler}
-              checked={showsPostMachines.allLocations}
-            />
-            <label className="ml-2" htmlFor="All">
-              All
-            </label>
-          </div>
-        </div>
-      </form>
+      <div className=" text-orange-600 font-bold p-4 px-4 py-2">Cities</div>
+      <div className="p-4 rounded-lg border-orange-600 border-2 ml-4 bg-black text-zinc-50">
+        {cities.map((city, index) => {
+          return (
+            <div key={index} className="flex">
+              <input
+                type="checkbox"
+                name={city[1]}
+                onChange={chooseCityHandler}
+                checked={filterCriterions.cities.includes(city[1])}
+              />
+              <label className="ml-2" htmlFor={city[1]}>
+                {city[0]}
+              </label>
+            </div>
+          );
+        })}
+      </div>
+      <div className=" text-orange-600 font-bold p-4 px-4 py-2">Countries</div>
+      <div className="p-4 rounded-lg border-orange-600 border-2 ml-4 bg-black text-zinc-50">
+        {countries.map((country, index) => {
+          return (
+            <div key={index} className="flex">
+              <input
+                type="checkbox"
+                name={country[1]}
+                onChange={chooseCountryHandler}
+                checked={filterCriterions.countries.includes(country[1])}
+              />
+              <label className="ml-2" htmlFor={country[1]}>
+                {country[0]}
+              </label>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

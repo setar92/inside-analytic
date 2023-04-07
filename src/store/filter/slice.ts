@@ -1,50 +1,56 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { FilterState } from '../../common/types';
+import {
+  FilterState,
+  SetOwnerAction,
+  SetCityAction,
+  SetCountryAction,
+} from '../../common/types';
 
 const initialState: FilterState = {
-  showNational: true,
-  showOmniva: true,
-  showVenipak: true,
-  justLatvia: false,
-  justRiga: true,
-  allLocations: false,
+  owners: ['National Post'],
+  cities: ['Rīga'],
+  countries: [],
 };
-
-interface actionType {
-  type: string;
-  payload: FilterState;
-}
 
 const { reducer, actions } = createSlice({
   name: 'filterState',
   initialState,
   reducers: {
-    setShow: (state, action: actionType) => {
-      const shows = action.payload;
-      state.showNational = shows.showNational;
-      state.showOmniva = shows.showOmniva;
-      state.showVenipak = shows.showVenipak;
+    setOwner: (state, action: SetOwnerAction) => {
+      const choosedOwner = action.payload.owner;
+      if (action.payload.turn) {
+        state.owners = [...state.owners, choosedOwner];
+      } else {
+        const ownersSet = new Set(state.owners);
+        ownersSet.delete(choosedOwner);
+        state.owners = Array.from(ownersSet);
+      }
     },
-    justRiga: (state, _) => {
-      state.justRiga = true;
-      state.allLocations = false;
-      state.justLatvia = false;
+    setCity: (state, action: SetCityAction) => {
+      const choosedCity = action.payload.city;
+      if (action.payload.turn) {
+        state.cities = [...state.cities, choosedCity];
+      } else {
+        const citiesSet = new Set(state.cities);
+        citiesSet.delete(choosedCity);
+        state.cities = Array.from(citiesSet);
+      }
     },
-    justLatvia: (state, _) => {
-      state.justLatvia = true;
-      state.justRiga = false;
-      state.allLocations = false;
-    },
-    allLocations: (state, _) => {
-      state.allLocations = true;
-      state.justLatvia = false;
-      state.justRiga = false;
+    setCountry: (state, action: SetCountryAction) => {
+      const choosedCountry = action.payload.country;
+      if (action.payload.turn) {
+        state.countries = [...state.countries, choosedCountry];
+      } else {
+        const countriesSet = new Set(state.countries);
+        countriesSet.delete(choosedCountry);
+        state.countries = Array.from(countriesSet);
+      }
     },
   },
 
   extraReducers: {},
 });
 
-export const { setShow, justRiga, justLatvia, allLocations } = actions;
+export const { setOwner, setCity, setCountry } = actions;
 export { reducer };
