@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { Routing } from './navigation/routing/routing';
 import { store } from './store/store';
 
-//not for copy
 
 const App: FC = () => {
   return (
