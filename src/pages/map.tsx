@@ -14,13 +14,13 @@ const MapPage: FC = () => {
 
   const hideInformation = (): void => {
     if (location) {
-      setLocation({ ...location, adress: '' });
+      setLocation({ ...location, address: '' });
     }
   };
 
   return (
     <div className="bg-white w-[100wh] h-[100wv] flex justify-start items-start flex-row m-4">
-      {location?.adress && (
+      {location?.address && (
         <AdditionalInfo hideInformation={hideInformation} location={location} />
       )}
       {isLoaded ? <Map showData={setLocation} /> : <Loader />}

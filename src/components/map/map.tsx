@@ -38,7 +38,6 @@ const Map: FC<MapInterface> = ({ showData }) => {
       lng: location.longitude,
     });
   };
-
   const mapRef = useRef<google.maps.Map | undefined>(undefined);
   const onLoad = useCallback((map: google.maps.Map) => {
     mapRef.current = map;
@@ -59,15 +58,17 @@ const Map: FC<MapInterface> = ({ showData }) => {
         options={defaultOptions}
       >
         {allLocations.map((locationData) => {
-          return locationData.data.map((loc) => (
-            <MyMarker
-              key={uuid()}
-              position={{ lat: loc.latitude, lng: loc.longitude }}
-              onClick={choosePostMachineHandler}
-              allInfo={loc}
-              iconUrl={locationData.marker}
-            />
-          ));
+          return locationData.data.map((loc) => {
+            return (
+              <MyMarker
+                key={uuid()}
+                position={{ lat: loc.latitude, lng: loc.longitude }}
+                onClick={choosePostMachineHandler}
+                allInfo={loc}
+                iconUrl={locationData.marker}
+              />
+            );
+          });
         })}
       </GoogleMap>
     </div>

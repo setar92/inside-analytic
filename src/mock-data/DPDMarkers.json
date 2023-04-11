@@ -1,0 +1,2522 @@
+[
+    {
+        "latLng": [
+            56.97398,
+            24.10295
+        ],
+        "id": "LV90246",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.95
+    },
+    {
+        "latLng": [
+            56.96437,
+            24.12029
+        ],
+        "id": "LV90120",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.89
+    },
+    {
+        "latLng": [
+            56.95879,
+            24.12557
+        ],
+        "id": "LV90128",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.13
+    },
+    {
+        "latLng": [
+            56.95268,
+            24.10075
+        ],
+        "id": "LV90192",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.28
+    },
+    {
+        "latLng": [
+            56.96574,
+            24.13106
+        ],
+        "id": "LV90077",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.63
+    },
+    {
+        "latLng": [
+            56.96523,
+            24.10512
+        ],
+        "id": "LV90033",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.69
+    },
+    {
+        "latLng": [
+            56.95433,
+            24.12825
+        ],
+        "id": "LV90138",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.69
+    },
+    {
+        "latLng": [
+            56.95729,
+            24.13397
+        ],
+        "id": "LV90151",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.79
+    },
+    {
+        "latLng": [
+            56.9544,
+            24.12054
+        ],
+        "id": "LV90219",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.96
+    },
+    {
+        "latLng": [
+            56.95467,
+            24.11954
+        ],
+        "id": "LV90108",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.06
+    },
+    {
+        "latLng": [
+            56.97129,
+            24.13443
+        ],
+        "id": "LV90193",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.36
+    },
+    {
+        "latLng": [
+            56.96023,
+            24.12966
+        ],
+        "id": "LV90230",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.36
+    },
+    {
+        "latLng": [
+            56.97437,
+            24.13589
+        ],
+        "id": "LV90007",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.41
+    },
+    {
+        "latLng": [
+            56.96617,
+            24.14578
+        ],
+        "id": "LV90167",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.62
+    },
+    {
+        "latLng": [
+            56.94996,
+            24.08124
+        ],
+        "id": "LV90027",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.64
+    },
+    {
+        "latLng": [
+            56.98784,
+            24.13043
+        ],
+        "id": "LV90149",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.8
+    },
+    {
+        "latLng": [
+            56.94761,
+            24.13651
+        ],
+        "id": "LV90197",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.82
+    },
+    {
+        "latLng": [
+            56.96445,
+            24.15059
+        ],
+        "id": "LV90198",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.11
+    },
+    {
+        "latLng": [
+            56.99527,
+            24.13056
+        ],
+        "id": "LV90111",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.29
+    },
+    {
+        "latLng": [
+            56.93817,
+            24.0897
+        ],
+        "id": "LV90210",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.38
+    },
+    {
+        "latLng": [
+            56.94235,
+            24.06289
+        ],
+        "id": "LV90106",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.08
+    },
+    {
+        "latLng": [
+            56.96325,
+            24.1694
+        ],
+        "id": "LV90168",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.44
+    },
+    {
+        "latLng": [
+            56.93674,
+            24.07126
+        ],
+        "id": "LV90107",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.48
+    },
+    {
+        "latLng": [
+            56.95202,
+            24.05438
+        ],
+        "id": "LV90196",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.57
+    },
+    {
+        "latLng": [
+            56.95929,
+            24.17261
+        ],
+        "id": "LV90071",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.11
+    },
+    {
+        "latLng": [
+            56.95854,
+            24.05281
+        ],
+        "id": "LV90059",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.46
+    },
+    {
+        "latLng": [
+            56.9693,
+            24.05911
+        ],
+        "id": "LV90029",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.71
+    },
+    {
+        "latLng": [
+            56.96587,
+            24.05261
+        ],
+        "id": "LV90251",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.94
+    },
+    {
+        "latLng": [
+            56.96697,
+            24.16147
+        ],
+        "id": "LV90032",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 7.25
+    },
+    {
+        "latLng": [
+            56.97701,
+            24.16528
+        ],
+        "id": "LV90037",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 7.65
+    },
+    {
+        "latLng": [
+            56.96676,
+            23.76273
+        ],
+        "id": "LV90154",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.75
+    },
+    {
+        "latLng": [
+            56.97208,
+            23.78863
+        ],
+        "id": "LV90225",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.09
+    },
+    {
+        "latLng": [
+            56.974707,
+            23.856782
+        ],
+        "id": "LV90057",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.59
+    },
+    {
+        "latLng": [
+            56.96077,
+            23.61443
+        ],
+        "id": "LV90030",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 9.87
+    },
+    {
+        "latLng": [
+            56.94725,
+            23.62107
+        ],
+        "id": "LV90172",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 10.08
+    },
+    {
+        "latLng": [
+            56.94452,
+            23.90968
+        ],
+        "id": "LV90025",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 10.96
+    },
+    {
+        "latLng": [
+            56.96021,
+            23.59708
+        ],
+        "id": "LV90171",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 11.61
+    },
+    {
+        "latLng": [
+            56.95621,
+            23.94852
+        ],
+        "id": "LV90181",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 13.2
+    },
+    {
+        "latLng": [
+            56.95819,
+            23.95949
+        ],
+        "id": "LV90231",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 15.01
+    },
+    {
+        "latLng": [
+            56.96152,
+            23.99877
+        ],
+        "id": "LV90141",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 16.86
+    },
+    {
+        "latLng": [
+            56.94902,
+            23.99772
+        ],
+        "id": "LV90109",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 16.88
+    },
+    {
+        "latLng": [
+            56.95416,
+            24.00573
+        ],
+        "id": "LV90042",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 17.89
+    },
+    {
+        "latLng": [
+            56.96048,
+            24.01035
+        ],
+        "id": "LV90103",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 17.98
+    },
+    {
+        "latLng": [
+            56.95947,
+            24.01824
+        ],
+        "id": "LV90178",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.15
+    },
+    {
+        "latLng": [
+            56.92633,
+            24.03684
+        ],
+        "id": "LV90170",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.39
+    },
+    {
+        "latLng": [
+            56.92976,
+            24.0376
+        ],
+        "id": "LV90008",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.57
+    },
+    {
+        "latLng": [
+            56.96247,
+            24.02244
+        ],
+        "id": "LV90184",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.92
+    },
+    {
+        "latLng": [
+            56.94449,
+            24.01175
+        ],
+        "id": "LV90036",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 19.27
+    },
+    {
+        "latLng": [
+            56.9389,
+            24.03628
+        ],
+        "id": "LV90248",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 19.36
+    },
+    {
+        "latLng": [
+            56.87961,
+            23.94628
+        ],
+        "id": "LV90092",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 19.8
+    },
+    {
+        "latLng": [
+            56.95403,
+            24.03817
+        ],
+        "id": "LV90011",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 20.18
+    },
+    {
+        "latLng": [
+            56.95854,
+            24.05281
+        ],
+        "id": "LV90059",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 20.71
+    },
+    {
+        "latLng": [
+            56.95202,
+            24.05438
+        ],
+        "id": "LV90196",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 20.93
+    },
+    {
+        "latLng": [
+            56.96587,
+            24.05261
+        ],
+        "id": "LV90251",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 21.08
+    },
+    {
+        "latLng": [
+            56.93674,
+            24.07126
+        ],
+        "id": "LV90107",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 21.64
+    },
+    {
+        "latLng": [
+            56.9693,
+            24.05911
+        ],
+        "id": "LV90029",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 22.38
+    },
+    {
+        "latLng": [
+            56.94235,
+            24.06289
+        ],
+        "id": "LV90106",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 22.77
+    },
+    {
+        "latLng": [
+            56.90446,
+            24.05232
+        ],
+        "id": "LV90021",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 23.42
+    },
+    {
+        "latLng": [
+            57.03387,
+            24.04846
+        ],
+        "id": "LV90078",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 28.21
+    },
+    {
+        "latLng": [
+            57.04078,
+            24.02933
+        ],
+        "id": "LV90129",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 29.62
+    },
+    {
+        "latLng": [
+            59.43621,
+            24.75492
+        ],
+        "id": "EE90006",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.11
+    },
+    {
+        "latLng": [
+            59.440732,
+            24.762282
+        ],
+        "id": "EE90223",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.2
+    },
+    {
+        "latLng": [
+            59.444125,
+            24.743206
+        ],
+        "id": "EE90072",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.4
+    },
+    {
+        "latLng": [
+            59.42468,
+            24.74309
+        ],
+        "id": "EE90073",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.8
+    },
+    {
+        "latLng": [
+            59.43019,
+            24.76694
+        ],
+        "id": "EE90171",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.9
+    },
+    {
+        "latLng": [
+            59.432063,
+            24.780328
+        ],
+        "id": "EE90041",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.99
+    },
+    {
+        "latLng": [
+            59.43844,
+            24.76986
+        ],
+        "id": "EE90193",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.15
+    },
+    {
+        "latLng": [
+            59.43148,
+            24.7608
+        ],
+        "id": "EE90050",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.2
+    },
+    {
+        "latLng": [
+            59.43999,
+            24.7377
+        ],
+        "id": "EE90203",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.34
+    },
+    {
+        "latLng": [
+            59.44153,
+            24.73012
+        ],
+        "id": "EE90178",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.37
+    },
+    {
+        "latLng": [
+            59.42714,
+            24.7227
+        ],
+        "id": "EE90002",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.66
+    },
+    {
+        "latLng": [
+            59.43579,
+            24.72072
+        ],
+        "id": "EE90200",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.72
+    },
+    {
+        "latLng": [
+            59.415134,
+            24.739126
+        ],
+        "id": "EE90101",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.75
+    },
+    {
+        "latLng": [
+            59.42608,
+            24.78452
+        ],
+        "id": "EE90182",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.03
+    },
+    {
+        "latLng": [
+            59.429723,
+            24.791429
+        ],
+        "id": "EE90167",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.09
+    },
+    {
+        "latLng": [
+            59.42039,
+            24.72842
+        ],
+        "id": "EE90199",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.4
+    },
+    {
+        "latLng": [
+            59.42289,
+            24.7947
+        ],
+        "id": "EE90172",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.52
+    },
+    {
+        "latLng": [
+            59.417982,
+            24.72139
+        ],
+        "id": "EE90246",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.9
+    },
+    {
+        "latLng": [
+            59.414748,
+            24.707221
+        ],
+        "id": "EE90058",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.04
+    },
+    {
+        "latLng": [
+            59.45338,
+            24.704802
+        ],
+        "id": "EE90150",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.06
+    },
+    {
+        "latLng": [
+            59.428147,
+            24.705561
+        ],
+        "id": "EE90023",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.06
+    },
+    {
+        "latLng": [
+            59.43531,
+            24.811441
+        ],
+        "id": "EE90102",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.07
+    },
+    {
+        "latLng": [
+            59.451866,
+            24.717973
+        ],
+        "id": "EE90030",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.27
+    },
+    {
+        "latLng": [
+            59.422623,
+            24.696965
+        ],
+        "id": "EE90056",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.38
+    },
+    {
+        "latLng": [
+            59.44492,
+            24.70077
+        ],
+        "id": "EE90192",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.47
+    },
+    {
+        "latLng": [
+            59.443339,
+            24.823332
+        ],
+        "id": "EE90040",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.56
+    },
+    {
+        "latLng": [
+            59.43957,
+            24.706805
+        ],
+        "id": "EE90074",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.94
+    },
+    {
+        "latLng": [
+            59.45439,
+            24.68998
+        ],
+        "id": "EE90231",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.15
+    },
+    {
+        "latLng": [
+            59.44741,
+            24.69268
+        ],
+        "id": "EE90005",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.21
+    },
+    {
+        "latLng": [
+            59.432126,
+            24.823897
+        ],
+        "id": "EE90057",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.03
+    },
+    {
+        "latLng": [
+            54.686603,
+            25.279706
+        ],
+        "id": "LT90300",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.02
+    },
+    {
+        "latLng": [
+            54.686663,
+            25.278832
+        ],
+        "id": "LT90072",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.11
+    },
+    {
+        "latLng": [
+            54.693714,
+            25.276134
+        ],
+        "id": "LT90019",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.93
+    },
+    {
+        "latLng": [
+            54.698559,
+            25.270408
+        ],
+        "id": "LT90191",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.82
+    },
+    {
+        "latLng": [
+            54.679991,
+            25.257854
+        ],
+        "id": "LT10137",
+        "pudoType": 100,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.12
+    },
+    {
+        "latLng": [
+            54.703204,
+            25.285921
+        ],
+        "id": "LT90286",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.17
+    },
+    {
+        "latLng": [
+            54.697501,
+            25.299705
+        ],
+        "id": "LT90080",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.32
+    },
+    {
+        "latLng": [
+            54.679003,
+            25.304471
+        ],
+        "id": "LT90231",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.42
+    },
+    {
+        "latLng": [
+            54.702186,
+            25.289354
+        ],
+        "id": "LT90084",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.44
+    },
+    {
+        "latLng": [
+            54.673399,
+            25.274985
+        ],
+        "id": "LT90082",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.49
+    },
+    {
+        "latLng": [
+            54.693511,
+            25.251006
+        ],
+        "id": "LT90085",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.65
+    },
+    {
+        "latLng": [
+            54.69949,
+            25.257288
+        ],
+        "id": "LT90067",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.75
+    },
+    {
+        "latLng": [
+            54.67553,
+            25.25572
+        ],
+        "id": "LT90004",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.94
+    },
+    {
+        "latLng": [
+            54.702831,
+            25.303744
+        ],
+        "id": "LT90302",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.95
+    },
+    {
+        "latLng": [
+            54.7057,
+            25.26796
+        ],
+        "id": "LT90005",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.97
+    },
+    {
+        "latLng": [
+            54.713944,
+            25.286441
+        ],
+        "id": "LT90273",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.06
+    },
+    {
+        "latLng": [
+            54.669557,
+            25.260262
+        ],
+        "id": "LT90128",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.56
+    },
+    {
+        "latLng": [
+            54.680969,
+            25.311971
+        ],
+        "id": "LT90088",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.56
+    },
+    {
+        "latLng": [
+            54.711256,
+            25.263177
+        ],
+        "id": "LT90118",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.07
+    },
+    {
+        "latLng": [
+            54.661392,
+            25.272371
+        ],
+        "id": "LT90058",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.11
+    },
+    {
+        "latLng": [
+            54.661089,
+            25.274619
+        ],
+        "id": "LT90284",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.21
+    },
+    {
+        "latLng": [
+            54.718027,
+            25.300495
+        ],
+        "id": "LT90087",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.22
+    },
+    {
+        "latLng": [
+            54.721674,
+            25.287876
+        ],
+        "id": "LT90101",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.28
+    },
+    {
+        "latLng": [
+            54.71196,
+            25.30082
+        ],
+        "id": "LT90003",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.3
+    },
+    {
+        "latLng": [
+            54.714283,
+            25.316152
+        ],
+        "id": "LT90020",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.55
+    },
+    {
+        "latLng": [
+            54.715111,
+            25.276632
+        ],
+        "id": "LT90270",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.67
+    },
+    {
+        "latLng": [
+            54.712161,
+            25.240606
+        ],
+        "id": "LT90297",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.24
+    },
+    {
+        "latLng": [
+            54.715016,
+            25.245372
+        ],
+        "id": "LT90086",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.28
+    },
+    {
+        "latLng": [
+            54.69285,
+            25.220687
+        ],
+        "id": "LT90071",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.19
+    },
+    {
+        "latLng": [
+            54.653283,
+            25.277712
+        ],
+        "id": "LT90169",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 8.59
+    },
+    {
+        "latLng": [
+            54.90454,
+            23.91607
+        ],
+        "id": "LT90008",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.16
+    },
+    {
+        "latLng": [
+            54.900894,
+            23.890893
+        ],
+        "id": "LT90170",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.31
+    },
+    {
+        "latLng": [
+            54.90399,
+            23.89843
+        ],
+        "id": "LT90011",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.35
+    },
+    {
+        "latLng": [
+            54.891564,
+            23.918374
+        ],
+        "id": "LT90119",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.05
+    },
+    {
+        "latLng": [
+            54.908162,
+            23.928944
+        ],
+        "id": "LT90121",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.08
+    },
+    {
+        "latLng": [
+            54.908855,
+            23.865782
+        ],
+        "id": "LT90069",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.08
+    },
+    {
+        "latLng": [
+            54.876061,
+            23.936182
+        ],
+        "id": "LT90098",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.55
+    },
+    {
+        "latLng": [
+            54.908516,
+            23.951598
+        ],
+        "id": "LT90187",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.78
+    },
+    {
+        "latLng": [
+            54.920658,
+            23.879891
+        ],
+        "id": "LT90095",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.07
+    },
+    {
+        "latLng": [
+            54.925012,
+            23.929392
+        ],
+        "id": "LT90100",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.08
+    },
+    {
+        "latLng": [
+            54.918852,
+            23.950351
+        ],
+        "id": "LT90288",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.15
+    },
+    {
+        "latLng": [
+            54.916308,
+            23.865993
+        ],
+        "id": "LT90226",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.19
+    },
+    {
+        "latLng": [
+            54.915398,
+            23.902055
+        ],
+        "id": "LT90096",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.23
+    },
+    {
+        "latLng": [
+            54.91972,
+            23.951
+        ],
+        "id": "LT90010",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.25
+    },
+    {
+        "latLng": [
+            54.911634,
+            23.947007
+        ],
+        "id": "LT90141",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.61
+    },
+    {
+        "latLng": [
+            54.869499,
+            23.887504
+        ],
+        "id": "LT90283",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.63
+    },
+    {
+        "latLng": [
+            54.875783,
+            23.912226
+        ],
+        "id": "LT90033",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.63
+    },
+    {
+        "latLng": [
+            54.921686,
+            23.963136
+        ],
+        "id": "LT90112",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.93
+    },
+    {
+        "latLng": [
+            54.912324,
+            23.969701
+        ],
+        "id": "LT90195",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.01
+    },
+    {
+        "latLng": [
+            54.930746,
+            23.93669
+        ],
+        "id": "LT90035",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.12
+    },
+    {
+        "latLng": [
+            54.865251,
+            23.945259
+        ],
+        "id": "LT90018",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.38
+    },
+    {
+        "latLng": [
+            54.899046,
+            23.963551
+        ],
+        "id": "LT90292",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.55
+    },
+    {
+        "latLng": [
+            54.917887,
+            23.967031
+        ],
+        "id": "LT90016",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.6
+    },
+    {
+        "latLng": [
+            54.906088,
+            23.974776
+        ],
+        "id": "LT90126",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.74
+    },
+    {
+        "latLng": [
+            54.930585,
+            23.897316
+        ],
+        "id": "LT90116",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.81
+    },
+    {
+        "latLng": [
+            54.931792,
+            23.887114
+        ],
+        "id": "LT90290",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.05
+    },
+    {
+        "latLng": [
+            54.898966,
+            23.960261
+        ],
+        "id": "LT90083",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.24
+    },
+    {
+        "latLng": [
+            54.9283,
+            23.88781
+        ],
+        "id": "LT90009",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.4
+    },
+    {
+        "latLng": [
+            54.939474,
+            23.893427
+        ],
+        "id": "LT90059",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 7.61
+    },
+    {
+        "latLng": [
+            54.890331,
+            23.853373
+        ],
+        "id": "LT90201",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 7.73
+    },
+    {
+        "latLng": [
+            55.703514,
+            21.144049
+        ],
+        "id": "LT90091",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.08
+    },
+    {
+        "latLng": [
+            55.697862,
+            21.148747
+        ],
+        "id": "LT90303",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 0.75
+    },
+    {
+        "latLng": [
+            55.704357,
+            21.160922
+        ],
+        "id": "LT90192",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.09
+    },
+    {
+        "latLng": [
+            55.694237,
+            21.156514
+        ],
+        "id": "LT90114",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 1.98
+    },
+    {
+        "latLng": [
+            55.68687,
+            21.15603
+        ],
+        "id": "LT90012",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.06
+    },
+    {
+        "latLng": [
+            55.714788,
+            21.131356
+        ],
+        "id": "LT90036",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 2.62
+    },
+    {
+        "latLng": [
+            55.692667,
+            21.182448
+        ],
+        "id": "LT90113",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.21
+    },
+    {
+        "latLng": [
+            55.687979,
+            21.178706
+        ],
+        "id": "LT90220",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.46
+    },
+    {
+        "latLng": [
+            55.678813,
+            21.156586
+        ],
+        "id": "LT90224",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 3.48
+    },
+    {
+        "latLng": [
+            55.671661,
+            21.171248
+        ],
+        "id": "LT90070",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.14
+    },
+    {
+        "latLng": [
+            55.727338,
+            21.141319
+        ],
+        "id": "LT90120",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.61
+    },
+    {
+        "latLng": [
+            55.722874,
+            21.155039
+        ],
+        "id": "LT90155",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.61
+    },
+    {
+        "latLng": [
+            55.728611,
+            21.124577
+        ],
+        "id": "LT90060",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.82
+    },
+    {
+        "latLng": [
+            55.6653,
+            21.17616
+        ],
+        "id": "LT90013",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 4.96
+    },
+    {
+        "latLng": [
+            55.676613,
+            21.18899
+        ],
+        "id": "LT90062",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.11
+    },
+    {
+        "latLng": [
+            55.733977,
+            21.131977
+        ],
+        "id": "LT90263",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.62
+    },
+    {
+        "latLng": [
+            55.669485,
+            21.193223
+        ],
+        "id": "LT90304",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 5.79
+    },
+    {
+        "latLng": [
+            55.667539,
+            21.196624
+        ],
+        "id": "LT90184",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.34
+    },
+    {
+        "latLng": [
+            55.736706,
+            21.191539
+        ],
+        "id": "LT90108",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 6.41
+    },
+    {
+        "latLng": [
+            55.751545,
+            21.130191
+        ],
+        "id": "LT90218",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 7.33
+    },
+    {
+        "latLng": [
+            55.752391,
+            21.175574
+        ],
+        "id": "LT90109",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 8.26
+    },
+    {
+        "latLng": [
+            55.753637,
+            21.151215
+        ],
+        "id": "LT90258",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 8.31
+    },
+    {
+        "latLng": [
+            55.712467,
+            21.384066
+        ],
+        "id": "LT90042",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.83
+    },
+    {
+        "latLng": [
+            55.578629,
+            21.271731
+        ],
+        "id": "LT90130",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 18.89
+    },
+    {
+        "latLng": [
+            55.712291,
+            21.390286
+        ],
+        "id": "LT90181",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 19.05
+    },
+    {
+        "latLng": [
+            55.561262,
+            21.311326
+        ],
+        "id": "LT90267",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 21.08
+    },
+    {
+        "latLng": [
+            55.894918,
+            21.235433
+        ],
+        "id": "LT90244",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 26.89
+    },
+    {
+        "latLng": [
+            55.893743,
+            21.262515
+        ],
+        "id": "LT90063",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 27.95
+    },
+    {
+        "latLng": [
+            55.912846,
+            21.077574
+        ],
+        "id": "LT90153",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 28.57
+    },
+    {
+        "latLng": [
+            55.915526,
+            21.070588
+        ],
+        "id": "LT90221",
+        "pudoType": 400,
+        "options": {
+            "icon": "/lt/mydpd/static/img/gmaps/pudo/dpd.svg",
+            "clickable": true,
+            "tooltip": null
+        },
+        "distance": 29.05
+    }
+]

@@ -2,6 +2,8 @@ import {
   commonNationalPost,
   commonOmnivaPost,
   commonVenipakPost,
+  commonuDropPost,
+  commonDPDPost,
 } from '../../helpers/locations-dto';
 import { IAllLocationsData } from '../types';
 
@@ -33,6 +35,8 @@ const allLocationsData: IAllLocationsData[] = [
     marker: 'VenipakMarket.svg',
     data: commonVenipakPost,
   },
+  { ownerName: 'uDrop', marker: 'uDrop.svg', data: commonuDropPost },
+  { ownerName: 'DPD', marker: 'dpd.png', data: commonDPDPost },
 ];
 
 export { cities, countries, allLocationsData };

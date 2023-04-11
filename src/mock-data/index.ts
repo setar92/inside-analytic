@@ -1,5 +1,15 @@
+import locationsDPD from './DPDMarkers.json';
+import infoDPD from './DPDparcelShop.json';
 import locationsNationalPost from './NationalPost.json';
 import locationsOmniva from './Omniva.json';
+import locationsuDrop from './uDrop.json';
 import locationsVenipak from './Venipak.json';
 
-export { locationsNationalPost, locationsOmniva, locationsVenipak };
+export {
+  locationsNationalPost,
+  locationsOmniva,
+  locationsVenipak,
+  locationsuDrop,
+  locationsDPD,
+  infoDPD,
+};

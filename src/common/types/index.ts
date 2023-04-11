@@ -6,6 +6,7 @@ export type {
   VenipakLocation,
   Owner,
   IAllLocationsData,
+  uDropLocation,
 } from './locations';
 export type {
   FilterState,
@@ -13,3 +14,4 @@ export type {
   SetCityAction,
   SetCountryAction,
 } from './filter-state';
+export type { DPDLocationCoordinate, DpDLocationInformation } from './dpd';

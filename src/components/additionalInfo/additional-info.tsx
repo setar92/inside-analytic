@@ -33,7 +33,7 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({
           <p className="ml-2">{location?.name}</p>
         </div>
         <div>
-          <p className="ml-2">{location?.adress}</p>
+          <p className="ml-2">{location?.address}</p>
         </div>
         <div>
           <p className="ml-2 text-amber-800 font-bold">

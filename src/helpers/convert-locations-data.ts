@@ -1,8 +1,11 @@
 import {
   CommonLocation,
+  DPDLocationCoordinate,
+  DpDLocationInformation,
   NationalPostlocation,
   OmnivaLocation,
   VenipakLocation,
+  uDropLocation,
 } from '../common/types';
 
 function mapNationalPostLocation(
@@ -15,7 +18,7 @@ function mapNationalPostLocation(
     country: 'LV',
     iconUrl: 'national-post.svg',
     owner: 'National',
-    adress: location.tmpAddress,
+    address: location.tmpAddress,
     city: [location.tmpDistrict],
   };
 }
@@ -39,7 +42,7 @@ function mapOmnivaLocation(location: OmnivaLocation): CommonLocation {
     country: location.country_id,
     iconUrl: 'sasi.webp',
     owner: 'Omniva',
-    adress: location.title,
+    address: location.title,
     city: [location.A1_NIMI, location.A2_NIMI, city],
   };
 }
@@ -52,9 +55,75 @@ function mapVenipakLocation(location: VenipakLocation): CommonLocation {
     country: location.country,
     iconUrl: 'VenipakMarket.svg',
     owner: 'Venipak',
-    adress: location.address,
+    address: location.address,
     city: [location.city],
   };
 }
 
-export { mapNationalPostLocation, mapOmnivaLocation, mapVenipakLocation };
+function mapDPDLocation(
+  location: DPDLocationCoordinate,
+  info: DpDLocationInformation[],
+): CommonLocation {
+  const dpdLocationInfo = info.find(
+    (info) => info.id === location.id,
+  ) as DpDLocationInformation;
+  let city = 'null';
+
+  if (dpdLocationInfo.address.city === 'RĪGA') {
+    city = 'Rīga';
+  }
+  if (dpdLocationInfo.address.city === 'JŪRMALA') {
+    city = 'Jūrmala';
+  }
+  if (dpdLocationInfo.address.city === 'TALLINN') {
+    city = 'Tallinn';
+  }
+  if (dpdLocationInfo.address.city === 'KAUNAS') {
+    city = 'Kaunas';
+  }
+  if (dpdLocationInfo.address.city === 'KLAIPĖDA') {
+    city = 'Klaip\u0117da';
+  }
+  if (dpdLocationInfo.address.city === 'VILNIUS') {
+    city = 'Vilnius';
+  }
+  return {
+    name: dpdLocationInfo.name,
+    latitude: location.latLng[0],
+    longitude: location.latLng[1],
+    country: dpdLocationInfo.address.country,
+    iconUrl: 'dpd.png',
+    owner: 'DPD',
+    address: dpdLocationInfo.address.streetName,
+    city: [dpdLocationInfo.address.city, city],
+  };
+}
+
+function mapDataToCommonLocation(data: uDropLocation): CommonLocation {
+  const coords: number[] = data.base;
+  const latitude: number = coords[0];
+  const longitude: number = coords[1];
+
+  const name: string = data.id;
+  const address = '';
+
+  const commonLocation: CommonLocation = {
+    latitude: latitude,
+    longitude: longitude,
+    name,
+    address,
+    owner: 'uDrop',
+    city: ['HZ'],
+    country: 'Czech',
+    iconUrl: 'uDrop.svg',
+  };
+  return commonLocation;
+}
+
+export {
+  mapNationalPostLocation,
+  mapOmnivaLocation,
+  mapVenipakLocation,
+  mapDataToCommonLocation,
+  mapDPDLocation,
+};

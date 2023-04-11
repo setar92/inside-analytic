@@ -1,4 +1,4 @@
-type Owner = 'Omniva' | 'National' | 'Venipak';
+type Owner = 'Omniva' | 'National' | 'Venipak' | 'uDrop' | 'DPD';
 interface NationalPostlocation {
   tmpLat: number;
   tmpLong: number;
@@ -93,7 +93,22 @@ interface CommonLocation {
   country: string;
   owner: Owner;
   iconUrl: string;
-  adress: string;
+  address: string;
+}
+
+interface uDropLocation {
+  id: string;
+  base: number[];
+  zrange: number[];
+  layer: string;
+  features: Array<Feature>;
+}
+
+interface Feature {
+  id: string;
+  a: number[];
+  bb: number[];
+  c: string;
 }
 
 interface IAllLocationsData {
@@ -109,4 +124,5 @@ export type {
   VenipakLocation,
   Owner,
   IAllLocationsData,
+  uDropLocation,
 };

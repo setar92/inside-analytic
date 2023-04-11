@@ -3,6 +3,7 @@ export {
   mapNationalPostLocation,
   mapOmnivaLocation,
   mapVenipakLocation,
+  mapDataToCommonLocation,
 } from './convert-locations-data';
 export {
   commonNationalPost,

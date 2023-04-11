@@ -2,11 +2,16 @@ import {
   locationsNationalPost,
   locationsOmniva,
   locationsVenipak,
+  locationsuDrop,
+  infoDPD,
+  locationsDPD,
 } from '../mock-data';
 import {
   mapNationalPostLocation,
   mapOmnivaLocation,
   mapVenipakLocation,
+  mapDataToCommonLocation,
+  mapDPDLocation,
 } from './convert-locations-data';
 
 const commonNationalPost = locationsNationalPost
@@ -18,5 +23,16 @@ const commonOmnivaPost = locationsOmniva
 const commonVenipakPost = locationsVenipak.map((loc) =>
   mapVenipakLocation(loc),
 );
+const commonuDropPost = locationsuDrop.map((loc) =>
+  mapDataToCommonLocation(loc),
+);
 
-export { commonNationalPost, commonOmnivaPost, commonVenipakPost };
+const commonDPDPost = locationsDPD.map((loc) => mapDPDLocation(loc, infoDPD));
+
+export {
+  commonNationalPost,
+  commonOmnivaPost,
+  commonVenipakPost,
+  commonuDropPost,
+  commonDPDPost,
+};
