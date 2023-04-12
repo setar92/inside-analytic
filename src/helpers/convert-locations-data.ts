@@ -100,21 +100,17 @@ function mapDPDLocation(
 }
 
 function mapDataToCommonLocation(data: uDropLocation): CommonLocation {
-  const coords: number[] = data.base;
-  const latitude: number = coords[0];
-  const longitude: number = coords[1];
-
-  const name: string = data.id;
-  const address = '';
+  const name = String(data.id);
+  const address = 'Latvia';
 
   const commonLocation: CommonLocation = {
-    latitude: latitude,
-    longitude: longitude,
+    latitude: data.lat,
+    longitude: data.lng,
     name,
     address,
     owner: 'uDrop',
-    city: ['HZ'],
-    country: 'Czech',
+    city: [data.city],
+    country: data.country,
     iconUrl: 'uDrop.svg',
   };
   return commonLocation;

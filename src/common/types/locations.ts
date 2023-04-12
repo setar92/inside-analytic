@@ -97,11 +97,11 @@ interface CommonLocation {
 }
 
 interface uDropLocation {
-  id: string;
-  base: number[];
-  zrange: number[];
-  layer: string;
-  features: Array<Feature>;
+  lat: number;
+  lng: number;
+  id: number;
+  country: string;
+  city: string;
 }
 
 interface Feature {
