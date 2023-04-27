@@ -15,6 +15,7 @@ const cities = [
   ['Vilnius', 'Vilnius'],
   ['Kaunas', 'Kaunas'],
   ['Klaipeda', 'Klaip\u0117da'],
+  ['Daugavpils', 'Daugavpils'],
 ];
 const countries = [
   ['All', 'All'],
