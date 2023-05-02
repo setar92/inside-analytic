@@ -7,6 +7,7 @@ export type {
   Owner,
   IAllLocationsData,
   uDropLocation,
+  LVPostLocation,
 } from './locations';
 export type {
   FilterState,

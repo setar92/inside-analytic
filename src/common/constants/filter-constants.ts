@@ -4,6 +4,8 @@ import {
   commonVenipakPost,
   commonuDropPost,
   commonDPDPost,
+  commonStokker,
+  commonLVPost,
 } from '../../helpers/locations-dto';
 import { IAllLocationsData } from '../types';
 
@@ -38,6 +40,8 @@ const allLocationsData: IAllLocationsData[] = [
   },
   { ownerName: 'uDrop', marker: 'uDrop.svg', data: commonuDropPost },
   { ownerName: 'DPD', marker: 'dpd.png', data: commonDPDPost },
+  { ownerName: 'Stokker', marker: 'stokker.svg', data: commonStokker },
+  { ownerName: 'LT-post', marker: 'LT-post.svg', data: commonLVPost },
 ];
 
 export { cities, countries, allLocationsData };

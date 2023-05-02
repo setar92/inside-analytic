@@ -1,4 +1,11 @@
-type Owner = 'Omniva' | 'National' | 'Venipak' | 'uDrop' | 'DPD';
+type Owner =
+  | 'Omniva'
+  | 'National'
+  | 'Venipak'
+  | 'uDrop'
+  | 'DPD'
+  | 'Stokker'
+  | 'LT-post';
 interface NationalPostlocation {
   tmpLat: number;
   tmpLong: number;
@@ -103,12 +110,17 @@ interface uDropLocation {
   country: string;
   city: string;
 }
-
-interface Feature {
-  id: string;
-  a: number[];
-  bb: number[];
-  c: string;
+interface LVPostLocation {
+  name: string;
+  addressText: string;
+  addressDetails: {
+    settlementName: string;
+    countryCode: string;
+  };
+  map: {
+    longitude: string;
+    latitude: string;
+  };
 }
 
 interface IAllLocationsData {
@@ -125,4 +137,5 @@ export type {
   Owner,
   IAllLocationsData,
   uDropLocation,
+  LVPostLocation,
 };

@@ -6,6 +6,7 @@ import {
   OmnivaLocation,
   VenipakLocation,
   uDropLocation,
+  LVPostLocation,
 } from '../common/types';
 
 function mapNationalPostLocation(
@@ -116,10 +117,26 @@ function mapDataToCommonLocation(data: uDropLocation): CommonLocation {
   return commonLocation;
 }
 
+function mapLVPostLocation(data: LVPostLocation): CommonLocation {
+  const commonLocation: CommonLocation = {
+    latitude: +data.map.latitude,
+    longitude: +data.map.longitude,
+    name: data.name,
+    address: data.addressText,
+    owner: 'LT-post',
+    city: [data.addressDetails.settlementName],
+    country: data.addressDetails.countryCode,
+    iconUrl: 'uDrop.svg',
+  };
+
+  return commonLocation;
+}
+
 export {
   mapNationalPostLocation,
   mapOmnivaLocation,
   mapVenipakLocation,
   mapDataToCommonLocation,
   mapDPDLocation,
+  mapLVPostLocation,
 };
