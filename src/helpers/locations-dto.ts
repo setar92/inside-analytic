@@ -41,6 +41,7 @@ const commonStokker: CommonLocation[] = [
     longitude: 24.139749741575724,
     name: 'Stokker',
     owner: 'Stokker',
+    img: 'stokker.jpg',
   },
 ];
 const commonLVPost: CommonLocation[] = locationLVPost.map((loc) =>

@@ -22,6 +22,11 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({
       }}
     >
       <div className="relative">
+        {location.img && (
+          <div className="mt-40">
+            <img src={require('./stokker.jpg')} width={400} />
+          </div>
+        )}
         <div
           className="flex justify-end absolute top-[-12px] right-[-10px]"
           onClick={hideInformation}

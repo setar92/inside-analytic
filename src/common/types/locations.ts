@@ -101,6 +101,7 @@ interface CommonLocation {
   owner: Owner;
   iconUrl: string;
   address: string;
+  img?: string;
 }
 
 interface uDropLocation {
