@@ -46,7 +46,6 @@ const Map: FC<MapInterface> = ({ showData }) => {
   const onUnmount = useCallback((_: google.maps.Map) => {
     mapRef.current = undefined;
   }, []);
-  console.log(allLocations);
 
   return (
     <div className="flex justify-center">
