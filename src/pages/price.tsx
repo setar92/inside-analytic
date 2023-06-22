@@ -1,13 +1,12 @@
 import { FC } from 'react';
 
-import { Calculator, Price } from '../components';
+import { Price, Header } from '../components';
 
 export const PricePage: FC = () => {
   return (
     <div>
-      <Calculator></Calculator>
-      <Price></Price>
-      price-paged
+      <Header />
+      <Price />
     </div>
   );
 };
