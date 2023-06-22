@@ -1,5 +1,5 @@
 export enum AppRoute {
   MAP = '/',
-  CALCULATOR = 'calculator',
-  PRICE = 'price',
+  CALCULATOR = '/calculator',
+  PRICE = '/price',
 }

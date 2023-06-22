@@ -7,8 +7,8 @@ import { Loader, Map, AdditionalInfo, Filter, Header } from '../components';
 
 const MapPage: FC = () => {
   const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP as string,
+    libraries: ['places'],
   });
   const [location, setLocation] = useState<CommonLocation>();
 
@@ -19,13 +19,19 @@ const MapPage: FC = () => {
   };
 
   return (
-    <div className="bg-white w-[100wh] h-[100wv] flex justify-start items-start flex-row m-4">
+    <div className="flex flex-col">
       <Header />
-      {location?.address && (
-        <AdditionalInfo hideInformation={hideInformation} location={location} />
-      )}
-      {isLoaded ? <Map showData={setLocation} /> : <Loader />}
-      <Filter />
+
+      <div className="bg-white w-[100wh] h-[100wv] flex justify-start items-start flex-row m-4">
+        {location?.address && (
+          <AdditionalInfo
+            hideInformation={hideInformation}
+            location={location}
+          />
+        )}
+        {isLoaded ? <Map showData={setLocation} /> : <Loader />}
+        <Filter />
+      </div>
     </div>
   );
 };
