@@ -15,7 +15,7 @@ export const Header: FC = () => {
     navigate(AppRoute.CALCULATOR);
   };
   return (
-    <header className="flex flex-row p-4 bg-orange-100 rounded-md shadow-md">
+    <header className="flex flex-row p-4 bg-main rounded-md shadow-md">
       <div
         className="mr-4 hover: cursor-pointer text-sky-900 text-xl hover:text-cyan-600"
         onClick={navigateMapPageHandler}

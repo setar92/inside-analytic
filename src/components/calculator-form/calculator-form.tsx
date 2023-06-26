@@ -1,17 +1,9 @@
-import { FC, useState, useRef, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import Geocode from 'react-geocode';
 import { FaLocationArrow, FaTimes } from 'react-icons/fa';
 import uuid from 'react-uuid';
 
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Flex,
-  HStack,
-  IconButton,
-  Text,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, IconButton } from '@chakra-ui/react';
 import {
   useJsApiLoader,
   GoogleMap,
@@ -33,8 +25,6 @@ const CalculatorForm: FC = () => {
     libraries: ['places'],
   });
 
-  const originRef = useRef<HTMLInputElement>(null);
-  const destiantionRef = useRef<HTMLInputElement>(null);
   const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
 
   const [map, setMap] = useState<google.maps.Map | null>(null);
@@ -42,6 +32,8 @@ const CalculatorForm: FC = () => {
     useState<google.maps.DirectionsResult | null>(null);
   const [distance, setDistance] = useState('');
   const [duration, setDuration] = useState('');
+  const [origin, setOrigin] = useState<string>('');
+  const [destination, setDestination] = useState<string>('');
 
   Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAP as string);
   Geocode.setLanguage('en');
@@ -50,49 +42,53 @@ const CalculatorForm: FC = () => {
   Geocode.enableDebug();
 
   const filterCriterions = useAppSelector((state) => state.filter);
-  const geocodeFunction = async function (): Promise<void> {
+  const geocodeFunction = async function (
+    location: CommonLocation,
+  ): Promise<string> {
     const response = await Geocode.fromLatLng(
-      String(center.lat),
-      String(center.lng),
+      String(location.latitude),
+      String(location.longitude),
     );
-    console.log(
-      response.results[0].formatted_address,
-      'response.results[0].formatted_address',
-    );
+    const adress = response.results[0].formatted_address;
+    return adress;
   };
-  geocodeFunction();
 
   useEffect(() => {
     const locationsData = filterData(allLocationsData, filterCriterions);
     setAllLocations(locationsData);
   }, [filterCriterions]);
 
-  const choosePostMachineHandler = (location: CommonLocation): void => {
-    // showData(location);
-    // setPosition({
-    //   lat: location.latitude,
-    //   lng: location.longitude,
-    // });
-    console.log(location, 'location');
+  const choosePostMachineHandler = async (
+    location: CommonLocation,
+  ): Promise<void> => {
+    const adress = await geocodeFunction(location);
+    if (destination) {
+      setOrigin('');
+      setDestination('');
+    }
+    if (!origin) {
+      setOrigin(adress);
+    } else {
+      setDestination(adress);
+    }
   };
 
   async function calculateRoute(): Promise<void> {
-    if (originRef.current?.value && destiantionRef.current?.value) {
-      if (
-        originRef.current.value === '' ||
-        destiantionRef.current.value === ''
-      ) {
+    if (origin && destination) {
+      if (origin === '' || destination === '') {
         return;
       }
     }
     setDirectionsResponse(null);
     setDistance('');
     setDuration('');
+    // setOrigin('');
+    // setDestination('');
     // eslint-disable-next-line no-undef
     const directionsService = new google.maps.DirectionsService();
     const results = await directionsService.route({
-      origin: originRef.current!.value,
-      destination: destiantionRef.current!.value,
+      origin: origin,
+      destination: destination,
       // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.DRIVING,
     });
@@ -113,8 +109,8 @@ const CalculatorForm: FC = () => {
     setDirectionsResponse(null);
     setDistance('');
     setDuration('');
-    originRef.current!.value = '';
-    destiantionRef.current!.value = '';
+    setOrigin('');
+    setDestination('');
   }
 
   if (!isLoaded) {
@@ -133,10 +129,6 @@ const CalculatorForm: FC = () => {
         >
           {allLocations.map((locationData) => {
             return locationData.data.map((loc) => {
-              console.log(
-                { lat: loc.latitude, lng: loc.longitude },
-                'we are hea',
-              );
               return (
                 <MyMarker
                   key={uuid()}
@@ -153,36 +145,57 @@ const CalculatorForm: FC = () => {
           )}
         </GoogleMap>
       </Box>
-      <Box
-        className="p-4 rounded-xl m-2 bg-white shadow-sm w-[60%] ml-auto mr-auto"
-        zIndex="1"
-      >
-        <HStack spacing={2} justifyContent="space-between">
-          <ButtonGroup>
-            <Button colorScheme="pink" type="submit" onClick={calculateRoute}>
-              Calculate Route
-            </Button>
+      <div className="p-4 rounded-xl m-2 bg-white shadow-sm w-[80%] ml-auto mr-auto z-10">
+        <div className="flex flex-row w-[100%]">
+          <div className="text-sm p-2 rounded-md w-[40%]">
+            <input type="text" placeholder="Origin" value={origin} />
+          </div>
+          <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
+            <input type="text" placeholder="Destination" value={destination} />
+
+            {destination}
+          </div>
+          <div className="w-[20%] relative flex justify-end">
+            <div className="mr-2">
+              <Button
+                className="border-2 border-neutral-900 rounded-md p-2 bg-cyan-900 text-cyan-50 font-bold"
+                colorScheme="pink"
+                type="submit"
+                onClick={calculateRoute}
+              >
+                Calculate
+              </Button>
+            </div>
+            <div className="relative">
+              <IconButton
+                aria-label="center back"
+                icon={<FaTimes />}
+                onClick={clearRoute}
+                className="top-0 right-0"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-row w-[100%]">
+          <div className="text-sm p-2 rounded-md w-[40%]">
+            Distance: {distance}
+          </div>
+          <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
+            Duration: {duration}
+          </div>
+          <div className="relative w-[20%] flex justify-end">
             <IconButton
               aria-label="center back"
-              icon={<FaTimes />}
-              onClick={clearRoute}
+              icon={<FaLocationArrow />}
+              isRound
+              onClick={(): void => {
+                map && map.panTo(center);
+                map && map.setZoom(15);
+              }}
             />
-          </ButtonGroup>
-        </HStack>
-        <HStack spacing={4} mt={4} justifyContent="space-between">
-          <Text>Distance: {distance} </Text>
-          <Text>Duration: {duration} </Text>
-          <IconButton
-            aria-label="center back"
-            icon={<FaLocationArrow />}
-            isRound
-            onClick={(): void => {
-              map && map.panTo(center);
-              map && map.setZoom(15);
-            }}
-          />
-        </HStack>
-      </Box>
+          </div>
+        </div>
+      </div>
     </Flex>
   );
 };
