@@ -11,18 +11,26 @@ import {
 } from '@react-google-maps/api';
 
 import { allLocationsData } from '../../common/constants';
-import { CommonLocation, IAllLocationsData } from '../../common/types';
+import {
+  CommonLocation,
+  IAllLocationsData,
+  librarieType,
+} from '../../common/types';
 import { MyMarker } from '../../components/marker/MyMarker';
+import { calculatePrice } from '../../helpers';
 import { filterData } from '../../helpers/filter-logic';
 import { useAppSelector } from '../../hooks/store/store.hooks';
 import { defaultOptions } from '../map/options';
+import { ChooseClientType } from './choose-clientType';
+import { ChooseWeight } from './choose-weight';
 
 const center = { lat: 56.940763, lng: 24.138074 };
+const libraries: librarieType[] = ['places'];
 
 const CalculatorForm: FC = () => {
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP as string,
-    libraries: ['places'],
+    libraries,
   });
 
   const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
@@ -34,6 +42,9 @@ const CalculatorForm: FC = () => {
   const [duration, setDuration] = useState('');
   const [origin, setOrigin] = useState<string>('');
   const [destination, setDestination] = useState<string>('');
+  const [price, setPrice] = useState<number | string>(0);
+  const [weight, setWeight] = useState<number>(1);
+  const [userType, setUserType] = useState(0);
 
   Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAP as string);
   Geocode.setLanguage('en');
@@ -58,6 +69,18 @@ const CalculatorForm: FC = () => {
     setAllLocations(locationsData);
   }, [filterCriterions]);
 
+  useEffect(() => {
+    if (distance) {
+      const distanceNumber = +distance
+        .replace('км', '')
+        .replace(' ', '')
+        .replace(',', '.');
+      const prise = calculatePrice(distanceNumber, weight as number, userType);
+      prise === 100
+        ? setPrice('The distance should not exceed 30 km!')
+        : setPrice(prise);
+    }
+  }, [distance, weight, userType]);
   const choosePostMachineHandler = async (
     location: CommonLocation,
   ): Promise<void> => {
@@ -68,31 +91,29 @@ const CalculatorForm: FC = () => {
     }
     if (!origin) {
       setOrigin(adress);
-    } else {
+    } else if (!destination) {
       setDestination(adress);
+    }
+    if (destination) {
+      console.log(destination, 'destinations');
+      setOrigin(adress);
+      setDestination('');
     }
   };
 
   async function calculateRoute(): Promise<void> {
-    if (origin && destination) {
-      if (origin === '' || destination === '') {
-        return;
-      }
+    if (origin === '' || destination === '') {
+      return;
     }
-    setDirectionsResponse(null);
-    setDistance('');
-    setDuration('');
-    // setOrigin('');
-    // setDestination('');
-    // eslint-disable-next-line no-undef
+
     const directionsService = new google.maps.DirectionsService();
     const results = await directionsService.route({
       origin: origin,
       destination: destination,
-      // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.DRIVING,
     });
-    setDirectionsResponse(results);
+    setDirectionsResponse(() => null);
+    setDirectionsResponse(() => results);
     results &&
       results.routes[0] &&
       results.routes[0].legs[0] &&
@@ -111,10 +132,11 @@ const CalculatorForm: FC = () => {
     setDuration('');
     setOrigin('');
     setDestination('');
+    setPrice(0);
   }
 
   if (!isLoaded) {
-    return <div>Hi</div>;
+    return <div>Map loading</div>;
   }
   return (
     <Flex className="relative flex-col align-middle h-full w-full mt-5 justify-center">
@@ -127,6 +149,9 @@ const CalculatorForm: FC = () => {
           options={defaultOptions}
           onLoad={(map): void => setMap(map)}
         >
+          {directionsResponse && (
+            <DirectionsRenderer directions={directionsResponse} />
+          )}
           {allLocations.map((locationData) => {
             return locationData.data.map((loc) => {
               return (
@@ -140,20 +165,15 @@ const CalculatorForm: FC = () => {
               );
             });
           })}
-          {directionsResponse && (
-            <DirectionsRenderer directions={directionsResponse} />
-          )}
         </GoogleMap>
       </Box>
       <div className="p-4 rounded-xl m-2 bg-white shadow-sm w-[80%] ml-auto mr-auto z-10">
         <div className="flex flex-row w-[100%]">
           <div className="text-sm p-2 rounded-md w-[40%]">
-            <input type="text" placeholder="Origin" value={origin} />
+            <div className="w-[100%] p-1"> {origin}</div>
           </div>
           <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
-            <input type="text" placeholder="Destination" value={destination} />
-
-            {destination}
+            <div className="w-[100%] p-1"> {destination}</div>
           </div>
           <div className="w-[20%] relative flex justify-end">
             <div className="mr-2">
@@ -177,11 +197,14 @@ const CalculatorForm: FC = () => {
           </div>
         </div>
         <div className="flex flex-row w-[100%]">
-          <div className="text-sm p-2 rounded-md w-[40%]">
+          <div className="text-sm p-2 rounded-md w-[30%]">
             Distance: {distance}
           </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
+          <div className="mr-2 text-sm p-2 rounded-md w-[30%]">
             Duration: {duration}
+          </div>
+          <div className="mr-2 text-sm p-2 rounded-md w-[20%]">
+            Price: {price} €
           </div>
           <div className="relative w-[20%] flex justify-end">
             <IconButton
@@ -195,6 +218,8 @@ const CalculatorForm: FC = () => {
             />
           </div>
         </div>
+        <ChooseWeight setWeight={setWeight} />
+        <ChooseClientType setUserType={setUserType} />
       </div>
     </Flex>
   );

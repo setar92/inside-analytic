@@ -16,3 +16,4 @@ export type {
   SetCountryAction,
 } from './filter-state';
 export type { DPDLocationCoordinate, DpDLocationInformation } from './dpd';
+export type { librarieType } from './map';

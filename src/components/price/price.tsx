@@ -1,6 +1,11 @@
 import { FC } from 'react';
 
-import { gapsDistance, gapsWeight, pricesC2C, pricesB2C } from './data';
+import {
+  gapsDistance,
+  gapsWeight,
+  pricesC2C,
+  pricesB2C,
+} from '../../common/constants';
 
 const Price: FC = () => {
   return (
