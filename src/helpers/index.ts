@@ -10,3 +10,4 @@ export {
   commonOmnivaPost,
   commonVenipakPost,
 } from './locations-dto';
+export { calculatePrice } from './calculate-price';

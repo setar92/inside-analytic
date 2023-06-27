@@ -3,3 +3,7 @@ export { MyMarker } from './marker/MyMarker';
 export { Loader } from './loader/loader';
 export { AdditionalInfo } from './additionalInfo/additional-info';
 export { Filter } from './filter/filter';
+export { Price } from './price/price';
+export { Calculator } from './calculator/calculator';
+export { CalculatorForm } from './calculator-form/calculator-form';
+export { Header } from './header/header';
