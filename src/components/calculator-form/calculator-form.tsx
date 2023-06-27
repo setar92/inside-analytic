@@ -95,7 +95,6 @@ const CalculatorForm: FC = () => {
       setDestination(adress);
     }
     if (destination) {
-      console.log(destination, 'destinations');
       setOrigin(adress);
       setDestination('');
     }
