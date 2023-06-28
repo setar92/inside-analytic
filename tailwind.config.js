@@ -18,13 +18,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        main: '#F28300',
-        primery: '#0E0D16',
+        main: '#0E0D16',
+        primery: '#F28300',
+        black: '#000',
         gray: '#878D9D',
         grey: '#70778B',
         cardFon: '#EFF0F5',
         fon: '#F5F5F5',
-        white: '#FFFFFF',
+        white: '#FFF',
         stars: '#38415D',
         dark: '#3A4562',
         grayText: '#878D9D',

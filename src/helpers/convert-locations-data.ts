@@ -7,6 +7,7 @@ import {
   VenipakLocation,
   uDropLocation,
   LVPostLocation,
+  // GlsLocation,
 } from '../common/types';
 
 function mapNationalPostLocation(

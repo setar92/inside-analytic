@@ -50,7 +50,7 @@ const Map: FC<MapInterface> = ({ showData }) => {
   return (
     <div className="flex justify-center">
       <GoogleMap
-        mapContainerClassName="w-[80vw] h-[90vh] rounded-lg "
+        mapContainerClassName="w-[100vw] h-[89vh]"
         center={position}
         zoom={10}
         onLoad={onLoad}
