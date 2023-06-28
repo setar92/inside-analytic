@@ -16,7 +16,6 @@ export const Header: FC = () => {
   const navigateCalculatorPageHandler = (): void => {
     navigate(AppRoute.CALCULATOR);
   };
-  console.log(location.pathname, 'location.pathname');
   return (
     <header className="flex flex-row p-6 bg-white shadow-md font-semibold text-2xl text-main">
       <div className="ml-4 pt-2 ">
