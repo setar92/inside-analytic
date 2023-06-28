@@ -17,3 +17,4 @@ export type {
 } from './filter-state';
 export type { DPDLocationCoordinate, DpDLocationInformation } from './dpd';
 export type { librarieType } from './map';
+export type { GlsLocation } from './gls';

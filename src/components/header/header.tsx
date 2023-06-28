@@ -1,10 +1,12 @@
 import { FC } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
+import { logoGorisontal } from '../../assets';
 import { AppRoute } from '../../common/enums';
 
 export const Header: FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const navigateMapPageHandler = (): void => {
     navigate(AppRoute.MAP);
   };
@@ -14,22 +16,32 @@ export const Header: FC = () => {
   const navigateCalculatorPageHandler = (): void => {
     navigate(AppRoute.CALCULATOR);
   };
+  console.log(location.pathname, 'location.pathname');
   return (
-    <header className="flex flex-row p-4 bg-main rounded-md shadow-md">
+    <header className="flex flex-row p-6 bg-white shadow-md font-semibold text-2xl text-main">
+      <div className="ml-4 pt-2 ">
+        <img src={logoGorisontal} alt="logo" />
+      </div>
       <div
-        className="mr-4 hover: cursor-pointer text-sky-900 text-xl hover:text-cyan-600"
+        className={`ml-8 cursor-pointer ${
+          location.pathname === AppRoute.MAP ? 'text-primery' : null
+        }`}
         onClick={navigateMapPageHandler}
       >
         Main
       </div>
       <div
-        className="mr-4 hover: cursor-pointer text-sky-900 text-xl hover:text-cyan-600"
+        className={`ml-8 cursor-pointer ${
+          location.pathname === AppRoute.PRICE ? 'text-primery' : null
+        }`}
         onClick={navigatePricePageHandler}
       >
         Price
       </div>
       <div
-        className="mr-4 hover: cursor-pointer text-sky-900 text-xl hover:text-cyan-600"
+        className={`ml-8 cursor-pointer ${
+          location.pathname === AppRoute.CALCULATOR ? 'text-primery' : null
+        }`}
         onClick={navigateCalculatorPageHandler}
       >
         Calculator

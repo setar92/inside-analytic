@@ -18,12 +18,14 @@ const cities = [
   ['Kaunas', 'Kaunas'],
   ['Klaipeda', 'Klaip\u0117da'],
   ['Daugavpils', 'Daugavpils'],
+  ['Budapest', 'Budapest'],
 ];
 const countries = [
   ['All', 'All'],
   ['Latvia', 'LV'],
   ['Estonia', 'EE'],
   ['Lithuania', 'LT'],
+  ['Hungary', 'HU'],
 ];
 
 const allLocationsData: IAllLocationsData[] = [

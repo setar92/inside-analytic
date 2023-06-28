@@ -1,5 +1,6 @@
 import locationsDPD from './DPDMarkers.json';
 import infoDPD from './DPDparcelShop.json';
+import locationGLS from './GLS.json';
 import locationLVPost from './LV-post.json';
 import locationsNationalPost from './NationalPost.json';
 import locationsOmniva from './Omniva.json';
@@ -14,4 +15,5 @@ export {
   locationsDPD,
   infoDPD,
   locationLVPost,
+  locationGLS,
 };
