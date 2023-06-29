@@ -41,7 +41,6 @@ const Filter: FC = () => {
                   name={owner.ownerName}
                   onChange={chooseOwnerHandler}
                   checked={filterCriterions.owners.includes(owner.ownerName)}
-                  className="bg-primery"
                 />
                 <label className="ml-2" htmlFor="City">
                   {owner.ownerName}
