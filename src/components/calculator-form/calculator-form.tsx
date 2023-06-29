@@ -10,12 +10,8 @@ import {
   DirectionsRenderer,
 } from '@react-google-maps/api';
 
-import { allLocationsData } from '../../common/constants';
-import {
-  CommonLocation,
-  IAllLocationsData,
-  librarieType,
-} from '../../common/types';
+import { allLocationsData, libraries } from '../../common/constants';
+import { CommonLocation, IAllLocationsData } from '../../common/types';
 import { MyMarker } from '../../components/marker/MyMarker';
 import { calculatePrice } from '../../helpers';
 import { filterData } from '../../helpers/filter-logic';
@@ -25,7 +21,6 @@ import { ChooseClientType } from './choose-clientType';
 import { ChooseWeight } from './choose-weight';
 
 const center = { lat: 56.940763, lng: 24.138074 };
-const libraries: librarieType[] = ['places'];
 
 const CalculatorForm: FC = () => {
   const { isLoaded } = useJsApiLoader({

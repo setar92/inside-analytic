@@ -7,7 +7,7 @@ import {
   infoDPD,
   locationsDPD,
   locationLVPost,
-  locationGLS,
+  // locationGLS,
 } from '../mock-data';
 import {
   mapNationalPostLocation,

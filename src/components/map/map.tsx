@@ -1,10 +1,10 @@
-import { FC, useCallback, useRef, useState, useEffect } from 'react';
+import { FC, useState, useEffect } from 'react';
 import uuid from 'react-uuid';
 
-import { GoogleMap } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 import { MyMarker } from '..';
-import { allLocationsData } from '../../common/constants';
+import { allLocationsData, libraries } from '../../common/constants';
 import {
   ICoordinates,
   CommonLocation,
@@ -20,6 +20,11 @@ interface MapInterface {
 }
 
 const Map: FC<MapInterface> = ({ showData }) => {
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP as string,
+    libraries,
+  });
+
   const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
   const [position, setPosition] = useState<ICoordinates>({
     lat: commonNationalPost[0].latitude,
@@ -38,14 +43,10 @@ const Map: FC<MapInterface> = ({ showData }) => {
       lng: location.longitude,
     });
   };
-  const mapRef = useRef<google.maps.Map | undefined>(undefined);
-  const onLoad = useCallback((map: google.maps.Map) => {
-    mapRef.current = map;
-  }, []);
 
-  const onUnmount = useCallback((_: google.maps.Map) => {
-    mapRef.current = undefined;
-  }, []);
+  if (!isLoaded) {
+    return <div>Map is loading...</div>;
+  }
 
   return (
     <div className="flex justify-center">
@@ -53,8 +54,6 @@ const Map: FC<MapInterface> = ({ showData }) => {
         mapContainerClassName="w-[100vw] h-[89vh]"
         center={position}
         zoom={10}
-        onLoad={onLoad}
-        onUnmount={onUnmount}
         options={defaultOptions}
       >
         {allLocations.map((locationData) => {

@@ -7,7 +7,7 @@ const gapsDistance: Array<Array<number>> = [
   [15, 30],
 ];
 
-const gapsWeight = [2, 5, 10, 12];
+const gapsWeight = [2, 5, 10, 15];
 
 const pricesB2C: Array<Array<number | string>> = [
   [4.5, 5.5, 6.5, 7.5, 8.75, 'Formula'],
