@@ -1,6 +1,5 @@
 import { FC } from 'react';
 
-import { locationIcon } from '../../assets';
 import { CommonLocation } from '../../common/types';
 
 interface AdditionalInfoProps {
@@ -13,37 +12,34 @@ const AdditionalInfo: FC<AdditionalInfoProps> = ({
   location,
 }) => {
   return (
-    <div
-      className="text-[14px] pb-2 text-dark font-bold absolute z-10 bg-amber-100 p-4 border-orange-600 rounded-lg border-2"
-      style={{
-        top: '15%',
-        left: '40%',
-        transform: 'translate(-50%, -50%)',
-      }}
-    >
-      <div className="relative">
-        {location.img && (
-          <div className="mt-40">
-            <img src={require('./stokker.jpg')} width={400} />
+    <div className="right-auto justify-center ">
+      <div className="absolute top-4 left-0 text-[14px] w-[100vw] text-dark font-bold z-10 flex justify-center align-middle flex-col">
+        <div className="flex items-center flex-col ">
+          <div
+            className="bg-white p-4 rounded-2xl relative max-w-[400px]"
+            onClick={hideInformation}
+          >
+            <div>
+              <p className="ml-2 text-lg font-semibold">{location?.address}</p>
+            </div>
+            <div>
+              <p className="ml-2 text-primery font-semibold text-xs">
+                Owner: {location?.owner}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              {location.img && (
+                <div
+                  className=""
+                  style={{
+                    top: '20%',
+                  }}
+                >
+                  <img src={require('./stokker.jpg')} width={400} />
+                </div>
+              )}
+            </div>
           </div>
-        )}
-        <div
-          className="flex justify-end absolute top-[-12px] right-[-10px]"
-          onClick={hideInformation}
-        >
-          <div className=" cursor-pointer">x</div>
-        </div>
-        <div className="flex">
-          <img src={locationIcon} alt="locationIcon" />
-          <p className="ml-2">{location?.name}</p>
-        </div>
-        <div>
-          <p className="ml-2">{location?.address}</p>
-        </div>
-        <div>
-          <p className="ml-2 text-amber-800 font-bold">
-            Owner: {location?.owner}
-          </p>
         </div>
       </div>
     </div>

@@ -1,9 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import Geocode from 'react-geocode';
-import { FaLocationArrow, FaTimes } from 'react-icons/fa';
 import uuid from 'react-uuid';
 
-import { Box, Button, Flex, IconButton } from '@chakra-ui/react';
 import {
   useJsApiLoader,
   GoogleMap,
@@ -17,7 +15,6 @@ import { calculatePrice } from '../../helpers';
 import { filterData } from '../../helpers/filter-logic';
 import { useAppSelector } from '../../hooks/store/store.hooks';
 import { defaultOptions } from '../map/options';
-import { ChooseClientType } from './choose-clientType';
 import { ChooseWeight } from './choose-weight';
 
 const center = { lat: 56.940763, lng: 24.138074 };
@@ -30,16 +27,13 @@ const CalculatorForm: FC = () => {
 
   const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
   const [directionsResponse, setDirectionsResponse] =
     useState<google.maps.DirectionsResult | null>(null);
   const [distance, setDistance] = useState('');
-  const [duration, setDuration] = useState('');
   const [origin, setOrigin] = useState<string>('');
   const [destination, setDestination] = useState<string>('');
   const [price, setPrice] = useState<number | string>(0);
   const [weight, setWeight] = useState<number>(1);
-  const [userType, setUserType] = useState(0);
 
   Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAP as string);
   Geocode.setLanguage('en');
@@ -70,19 +64,18 @@ const CalculatorForm: FC = () => {
         .replace('км', '')
         .replace(' ', '')
         .replace(',', '.');
-      const prise = calculatePrice(distanceNumber, weight as number, userType);
+      const prise = calculatePrice(distanceNumber, weight as number);
       prise === 100
         ? setPrice('The distance should not exceed 30 km!')
         : setPrice(prise);
     }
-  }, [distance, weight, userType]);
+  }, [distance, weight]);
   const choosePostMachineHandler = async (
     location: CommonLocation,
   ): Promise<void> => {
     const adress = await geocodeFunction(location);
     if (destination) {
-      setOrigin('');
-      setDestination('');
+      clearRoute();
     }
     if (!origin) {
       setOrigin(adress);
@@ -113,17 +106,11 @@ const CalculatorForm: FC = () => {
       results.routes[0].legs[0] &&
       results.routes[0].legs[0].distance &&
       setDistance(results?.routes[0]?.legs[0]?.distance.text);
-    results &&
-      results.routes[0] &&
-      results.routes[0].legs[0] &&
-      results.routes[0].legs[0].duration &&
-      setDuration(results.routes[0].legs[0].duration.text);
   }
 
   function clearRoute(): void {
     setDirectionsResponse(null);
     setDistance('');
-    setDuration('');
     setOrigin('');
     setDestination('');
     setPrice(0);
@@ -133,15 +120,13 @@ const CalculatorForm: FC = () => {
     return <div>Map loading</div>;
   }
   return (
-    <Flex className="relative flex-col align-middle h-full w-full mt-5 justify-center">
-      <Box position="absolute" left={0} top={0} h="100%" w="100%">
-        {/* Google Map Box */}
+    <div className="h-full w-full relative">
+      <div className="w-[100%]">
         <GoogleMap
           center={center}
           zoom={15}
           mapContainerStyle={{ width: '100%', height: '650px' }}
           options={defaultOptions}
-          onLoad={(map): void => setMap(map)}
         >
           {directionsResponse && (
             <DirectionsRenderer directions={directionsResponse} />
@@ -160,62 +145,56 @@ const CalculatorForm: FC = () => {
             });
           })}
         </GoogleMap>
-      </Box>
-      <div className="p-4 rounded-xl m-2 bg-white shadow-sm w-[80%] ml-auto mr-auto z-10">
-        <div className="flex flex-row w-[100%]">
-          <div className="text-sm p-2 rounded-md w-[40%]">
-            <div className="w-[100%] p-1"> {origin}</div>
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
-            <div className="w-[100%] p-1"> {destination}</div>
-          </div>
-          <div className="w-[20%] relative flex justify-end">
-            <div className="mr-2">
-              <Button
-                className="border-2 border-neutral-900 rounded-md p-2 bg-cyan-900 text-cyan-50 font-bold"
-                colorScheme="pink"
-                type="submit"
-                onClick={calculateRoute}
-              >
-                Calculate
-              </Button>
-            </div>
-            <div className="relative">
-              <IconButton
-                aria-label="center back"
-                icon={<FaTimes />}
-                onClick={clearRoute}
-                className="top-0 right-0"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-row w-[100%]">
-          <div className="text-sm p-2 rounded-md w-[30%]">
-            Distance: {distance}
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[30%]">
-            Duration: {duration}
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[20%]">
-            Price: {price} €
-          </div>
-          <div className="relative w-[20%] flex justify-end">
-            <IconButton
-              aria-label="center back"
-              icon={<FaLocationArrow />}
-              isRound
-              onClick={(): void => {
-                map && map.panTo(center);
-                map && map.setZoom(15);
-              }}
-            />
-          </div>
-        </div>
-        <ChooseWeight setWeight={setWeight} />
-        <ChooseClientType setUserType={setUserType} />
       </div>
-    </Flex>
+      <div className="absolute p-4 rounded-xl m-2 bg-white shadow-sm w-[350px] ml-auto mr-auto z-10 top-4 left-4 flex flex-col">
+        <div>
+          <input
+            type="text"
+            name="origin"
+            placeholder="Select departure point on map"
+            className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px]"
+            value={origin}
+          />
+          <input
+            type="text"
+            name="destination"
+            placeholder="Select arrival point on map"
+            className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px] mt-3"
+            value={destination}
+          />
+        </div>
+        <ChooseWeight setWeight={setWeight} weight={weight} />
+
+        <div className="flex flex-row">
+          <div className="w-[154px]  bg-grey rounded-md font-medium px-3 py-2 mt-3 mr-3">
+            <p>Distance:</p>
+            <p
+              className={`mt-[-5px]  ${
+                distance ? 'text-primery' : 'text-main'
+              }`}
+            >
+              {distance ? `${distance}` : '...'}
+            </p>
+          </div>
+          <div className="w-[154px]  bg-grey rounded-md font-medium px-3 py-2 mt-3">
+            <p>Price:</p>
+            <p
+              className={`mt-[-5px]  ${
+                distance ? 'text-primery' : 'text-main'
+              }`}
+            >
+              {price ? `${price}€` : '...'}
+            </p>
+          </div>
+        </div>
+        <div
+          className="max-w bg-primery text-2xl font-semibold text-white rounded-md text-center py-2 mt-3 cursor-pointer"
+          onClick={calculateRoute}
+        >
+          Calculate
+        </div>
+      </div>
+    </div>
   );
 };
 
