@@ -21,7 +21,7 @@ const MapPage: FC = () => {
   return (
     <div className="flex flex-col">
       <Header />
-      <div className="bg-white w-[100wh] h-[100wv] flex justify-start items-start flex-row">
+      <div className="bg-white w-[100vw] flex relative">
         {location?.address && (
           <AdditionalInfo
             hideInformation={hideInformation}

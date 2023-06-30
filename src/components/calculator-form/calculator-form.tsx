@@ -1,9 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 import Geocode from 'react-geocode';
-import { FaLocationArrow, FaTimes } from 'react-icons/fa';
 import uuid from 'react-uuid';
 
-import { Box, Button, Flex, IconButton } from '@chakra-ui/react';
 import {
   useJsApiLoader,
   GoogleMap,
@@ -30,7 +28,6 @@ const CalculatorForm: FC = () => {
 
   const [allLocations, setAllLocations] = useState<IAllLocationsData[]>([]);
 
-  const [map, setMap] = useState<google.maps.Map | null>(null);
   const [directionsResponse, setDirectionsResponse] =
     useState<google.maps.DirectionsResult | null>(null);
   const [distance, setDistance] = useState('');
@@ -133,15 +130,14 @@ const CalculatorForm: FC = () => {
     return <div>Map loading</div>;
   }
   return (
-    <Flex className="relative flex-col align-middle h-full w-full mt-5 justify-center">
-      <Box position="absolute" left={0} top={0} h="100%" w="100%">
+    <div className="h-full w-full relative">
+      <div className="w-[100%]">
         {/* Google Map Box */}
         <GoogleMap
           center={center}
           zoom={15}
           mapContainerStyle={{ width: '100%', height: '650px' }}
           options={defaultOptions}
-          onLoad={(map): void => setMap(map)}
         >
           {directionsResponse && (
             <DirectionsRenderer directions={directionsResponse} />
@@ -160,8 +156,8 @@ const CalculatorForm: FC = () => {
             });
           })}
         </GoogleMap>
-      </Box>
-      <div className="p-4 rounded-xl m-2 bg-white shadow-sm w-[80%] ml-auto mr-auto z-10">
+      </div>
+      <div className="absolute p-4 rounded-xl m-2 bg-white shadow-sm w-[350px] h-[260px] ml-auto mr-auto z-10 top-4 left-4">
         <div className="flex flex-row w-[100%]">
           <div className="text-sm p-2 rounded-md w-[40%]">
             <div className="w-[100%] p-1"> {origin}</div>
@@ -171,22 +167,16 @@ const CalculatorForm: FC = () => {
           </div>
           <div className="w-[20%] relative flex justify-end">
             <div className="mr-2">
-              <Button
+              <button
                 className="border-2 border-neutral-900 rounded-md p-2 bg-cyan-900 text-cyan-50 font-bold"
-                colorScheme="pink"
                 type="submit"
                 onClick={calculateRoute}
               >
                 Calculate
-              </Button>
+              </button>
             </div>
             <div className="relative">
-              <IconButton
-                aria-label="center back"
-                icon={<FaTimes />}
-                onClick={clearRoute}
-                className="top-0 right-0"
-              />
+              <button onClick={clearRoute}>clearRoute</button>
             </div>
           </div>
         </div>
@@ -200,22 +190,12 @@ const CalculatorForm: FC = () => {
           <div className="mr-2 text-sm p-2 rounded-md w-[20%]">
             Price: {price} €
           </div>
-          <div className="relative w-[20%] flex justify-end">
-            <IconButton
-              aria-label="center back"
-              icon={<FaLocationArrow />}
-              isRound
-              onClick={(): void => {
-                map && map.panTo(center);
-                map && map.setZoom(15);
-              }}
-            />
-          </div>
+          <div className="relative w-[20%] flex justify-end"></div>
         </div>
         <ChooseWeight setWeight={setWeight} />
         <ChooseClientType setUserType={setUserType} />
       </div>
-    </Flex>
+    </div>
   );
 };
 
