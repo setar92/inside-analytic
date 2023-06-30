@@ -193,41 +193,6 @@ const CalculatorForm: FC = () => {
         >
           Calculate
         </div>
-
-        {/* <div className="flex flex-row w-[100%]">
-          <div className="text-sm p-2 rounded-md w-[40%]">
-            <div className="w-[100%] p-1"> {origin}</div>
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[40%]">
-            <div className="w-[100%] p-1"> {destination}</div>
-          </div>
-          <div className="w-[20%] relative flex justify-end">
-            <div className="mr-2">
-              <button
-                className="border-2 border-neutral-900 rounded-md p-2 bg-cyan-900 text-cyan-50 font-bold"
-                type="submit"
-                onClick={calculateRoute}
-              >
-                Calculate
-              </button>
-            </div>
-            <div className="relative">
-              <button onClick={clearRoute}>clearRoute</button>
-            </div>
-          </div>
-        </div> */}
-        {/* <div className="flex flex-row w-[100%]">
-          <div className="text-sm p-2 rounded-md w-[30%]">
-            Distance: {distance}
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[30%]">
-            Duration: {duration}
-          </div>
-          <div className="mr-2 text-sm p-2 rounded-md w-[20%]">
-            Price: {price} €
-          </div>
-          <div className="relative w-[20%] flex justify-end"></div>
-        </div> */}
       </div>
     </div>
   );
