@@ -8,8 +8,8 @@ import {
 } from '../../common/types';
 
 const initialState: FilterState = {
-  owners: ['National Post'],
-  cities: ['Rīga'],
+  owners: ['National Post', 'Omniva'],
+  cities: ['Rīga', 'Jūrmala'],
   countries: [],
 };
 
