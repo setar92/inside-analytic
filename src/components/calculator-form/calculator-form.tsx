@@ -1,5 +1,4 @@
 import { FC, useState, useEffect } from 'react';
-import Geocode from 'react-geocode';
 import uuid from 'react-uuid';
 
 import {
@@ -30,28 +29,12 @@ const CalculatorForm: FC = () => {
   const [directionsResponse, setDirectionsResponse] =
     useState<google.maps.DirectionsResult | null>(null);
   const [distance, setDistance] = useState('');
-  const [origin, setOrigin] = useState<string>('');
-  const [destination, setDestination] = useState<string>('');
+  const [origin, setOrigin] = useState<CommonLocation | null>(null);
+  const [destination, setDestination] = useState<CommonLocation | null>(null);
   const [price, setPrice] = useState<number | string>(0);
   const [weight, setWeight] = useState<number>(1);
 
-  Geocode.setApiKey(process.env.REACT_APP_GOOGLE_MAP as string);
-  Geocode.setLanguage('en');
-  Geocode.setRegion('es');
-  Geocode.setLocationType('ROOFTOP');
-  Geocode.enableDebug();
-
   const filterCriterions = useAppSelector((state) => state.filter);
-  const geocodeFunction = async function (
-    location: CommonLocation,
-  ): Promise<string> {
-    const response = await Geocode.fromLatLng(
-      String(location.latitude),
-      String(location.longitude),
-    );
-    const adress = response.results[0].formatted_address;
-    return adress;
-  };
 
   useEffect(() => {
     const locationsData = filterData(allLocationsData, filterCriterions);
@@ -73,34 +56,44 @@ const CalculatorForm: FC = () => {
   const choosePostMachineHandler = async (
     location: CommonLocation,
   ): Promise<void> => {
-    const adress = await geocodeFunction(location);
     if (destination) {
       clearRoute();
     }
+
+    if (
+      origin?.latitude === destination?.latitude &&
+      origin?.longitude === destination?.longitude &&
+      origin?.latitude !== undefined
+    )
+      return;
     if (!origin) {
-      setOrigin(adress);
+      setOrigin(location);
     } else if (!destination) {
-      setDestination(adress);
+      setDestination(location);
     }
     if (destination) {
-      setOrigin(adress);
-      setDestination('');
+      setOrigin(location);
+      setDestination(null);
     }
   };
 
   async function calculateRoute(): Promise<void> {
-    if (origin === '' || destination === '') {
+    if (origin === null || destination === null) {
       return;
     }
 
     const directionsService = new google.maps.DirectionsService();
     const results = await directionsService.route({
-      origin: origin,
-      destination: destination,
+      origin: new window.google.maps.LatLng(origin.latitude, origin.longitude),
+      destination: new window.google.maps.LatLng(
+        destination.latitude,
+        destination.longitude,
+      ),
       travelMode: google.maps.TravelMode.DRIVING,
     });
     setDirectionsResponse(() => null);
     setDirectionsResponse(() => results);
+    setAllLocations([]);
     results &&
       results.routes[0] &&
       results.routes[0].legs[0] &&
@@ -111,9 +104,11 @@ const CalculatorForm: FC = () => {
   function clearRoute(): void {
     setDirectionsResponse(null);
     setDistance('');
-    setOrigin('');
-    setDestination('');
+    setOrigin(null);
+    setDestination(null);
     setPrice(0);
+    const locationsData = filterData(allLocationsData, filterCriterions);
+    setAllLocations(locationsData);
   }
 
   if (!isLoaded) {
@@ -129,7 +124,15 @@ const CalculatorForm: FC = () => {
           options={defaultOptions}
         >
           {directionsResponse && (
-            <DirectionsRenderer directions={directionsResponse} />
+            <DirectionsRenderer
+              directions={directionsResponse}
+              options={{
+                polylineOptions: {
+                  strokeOpacity: 4,
+                  strokeColor: '#F28300',
+                },
+              }}
+            />
           )}
           {allLocations.map((locationData) => {
             return locationData.data.map((loc) => {
@@ -148,20 +151,12 @@ const CalculatorForm: FC = () => {
       </div>
       <div className="absolute p-4 rounded-xl m-2 bg-white shadow-sm w-[350px] ml-auto mr-auto z-10 top-4 left-4 flex flex-col">
         <div>
-          <input
-            type="text"
-            name="origin"
-            placeholder="Select departure point on map"
-            className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px]"
-            value={origin}
-          />
-          <input
-            type="text"
-            name="destination"
-            placeholder="Select arrival point on map"
-            className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px] mt-3"
-            value={destination}
-          />
+          <div className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px] min-h-[36px]">
+            {origin?.address}
+          </div>
+          <div className="bg-grey px-3 py-2 rounded-md text-sm font-semibold w-[318px] mt-3 min-h-[36px]">
+            {destination?.address}{' '}
+          </div>
         </div>
         <ChooseWeight setWeight={setWeight} weight={weight} />
 
@@ -192,6 +187,12 @@ const CalculatorForm: FC = () => {
           onClick={calculateRoute}
         >
           Calculate
+        </div>
+        <div
+          className="max-w  text-2xl font-semibold rounded-md text-center py-2 mt-3 cursor-pointer bg-gray"
+          onClick={clearRoute}
+        >
+          Clear
         </div>
       </div>
     </div>
